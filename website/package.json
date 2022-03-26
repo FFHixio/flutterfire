@@ -7,7 +7,9 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\"",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.56",
@@ -25,7 +27,8 @@
     "lodash.get": "^4.4.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-medium-image-zoom": "^4.3.1"
+    "react-medium-image-zoom": "^4.3.1",
+    "@snyk/protect": "latest"
   },
   "browserslist": {
     "production": [
@@ -48,5 +51,6 @@
     "eslint-plugin-react": "^7.20.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.3"
-  }
+  },
+  "snyk": true
 }
